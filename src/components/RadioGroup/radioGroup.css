@@ -1,0 +1,61 @@
+.filters__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.filters__gender {
+  margin-right: 50px;
+}
+
+.gender__list {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+
+.radio__group {
+  margin-bottom: 8px;
+}
+
+/* для элемента input c type="radio" */
+.custom__radio > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label связанного с .custom-radio */
+.custom__radio > span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+.custom__radio > span::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 1px solid #d8d8d8;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  cursor: pointer;
+}
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+.custom__radio > input:checked + span::before {
+  width: 20px;
+  height: 20px;
+  border: 6px solid #d8d8d8;
+  box-sizing: border-box;
+}

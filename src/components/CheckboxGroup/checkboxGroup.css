@@ -1,0 +1,75 @@
+.filters__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.age__checkboxes {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+
+.age__checkboxes {
+  display: flex;
+}
+
+.checkbox__col {
+  margin-right: 20px;
+}
+
+.filters__item {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.filters__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+/* для элемента input c type="checkbox" */
+.custom__checkbox > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom__checkbox > span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom__checkbox > span::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  margin-right: 10px;
+  border: 1px solid #adb5bd;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom__checkbox > input:checked + span::before {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 2px solid #ffcc33;
+  background: no-repeat center center url("../../img/checkbox__checked.svg");
+}
